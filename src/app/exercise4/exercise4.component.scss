@@ -1,0 +1,48 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.block {
+  display:flex;
+  width: auto;
+  height: 80px;
+}
+
+.itemSetting {
+  width: 80px;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.item1 {
+  height: 80px;
+  background-color: blue;
+}
+
+.item2 {
+  height: calc(80px/3);
+  margin-top: calc(80px*2/3);
+  background-color: lightgreen;
+}
+
+.item3 {
+  height: calc(80px/3);
+  margin: calc(80px/3) 10px;
+  background-color: red;
+}
+
+.item4 {
+  height: calc(80px/3);
+  background-color: green;
+}
+
+.item5 {
+  height: 80px;
+  background-color: yellow;
+}

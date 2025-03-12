@@ -1,0 +1,12 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-exercise3',
+  standalone: true,
+  imports: [],
+  templateUrl: './exercise3.component.html',
+  styleUrl: './exercise3.component.scss'
+})
+export class Exercise3Component {
+
+}

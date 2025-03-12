@@ -1,0 +1,5 @@
+<button (click)="loadingStart()">loading active</button>
+@if (loading$ | async) {
+  <div class="overlay"></div>
+  <mat-spinner></mat-spinner>
+}

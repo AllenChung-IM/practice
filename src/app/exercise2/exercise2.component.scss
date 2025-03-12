@@ -1,0 +1,44 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.flex {
+  display:flex;
+}
+
+.imgLeft {
+  width: 200px;
+  height: 200px;
+  margin-right: 24px;
+  display: block;
+  background-color: rgba(60,180,235,1)
+}
+
+.imgRight {
+  width: 300px;
+  height: 200px;
+  background-color: rgba(235,180,60,1)
+}
+
+.div {
+  width: 524px;
+  height: 100px;
+  margin: 36px 0;
+  background-color: rgba(60,235,180,1)
+}
+
+.input {
+  width: 386px;
+  height: 20px;
+  margin-right: 18px;
+  display: flex;
+  background-color: rgba(180,60,235,1)
+}
+
+.button {
+  width: 120px;
+  height: 20px;
+  background-color: rgba(180,235,60,1)
+}

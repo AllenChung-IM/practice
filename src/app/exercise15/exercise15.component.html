@@ -1,0 +1,14 @@
+<h1>職業選擇</h1>
+<div class="selectGrade">
+  <button class="selectBtn" (click)="Mage()">法師</button>
+  <button class="selectBtn" (click)="Warrior()">戰士</button>
+  <button class="selectBtn" (click)="Tank()">坦克</button>
+</div>
+<app-calculator
+  [jobInput]="job"
+  [gradeInput]="grade"
+  [attackForceInput]="attackForce"
+  [defendForceInput]="defendForce"
+  [newGradeInput]="newGrade"
+  (response)="showData($event)">
+</app-calculator>

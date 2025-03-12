@@ -1,0 +1,86 @@
+<div class="background">
+  <h1>{{ dataSetDescription }}</h1>
+  <br>
+  <h3>{{ locationsName }}</h3>
+
+  <div class="select">
+    <h5>地區</h5>
+    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+      @for (location of this.weatherData.records.Locations[0].Location; track $index) {
+        <input
+        type="radio"
+        class="btn-check"
+        name="btnradioLocation"
+        [id]="'btnradioLocation' + $index"
+        (change)="changeLocation(location)"
+        [value]="location"
+        autocomplete="off"
+        [checked]="$index === 0"
+      >
+      <label class="btn btn-outline-primary button" [for]="'btnradioLocation' + $index">{{ location.LocationName }}</label>
+      }
+    </div>
+  </div>
+
+  <div class="select">
+    <h5>項目</h5>
+    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+      @for (element of this.weatherData.records.Locations[0].Location[0].WeatherElement; track $index) {
+        <input
+        type="radio"
+        class="btn-check"
+        name="btnradioElement"
+        [id]="'btnradioElement' + $index"
+        (change)="changeElement(element)"
+        [value]="element"
+        autocomplete="off"
+        [checked]="$index === 0"
+      >
+      <label class="btn btn-outline-primary button" [for]="'btnradioElement' + $index">{{ element.ElementName }}</label>
+      }
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="displayRegion" id="displayRegion">
+    <div class="textRegion">
+      @for (data of this.chooseData.Time; track $index) {
+        @if (data.DataTime) {
+          <span class="text-primary">時間：</span>{{ data.DataTime | date: 'yyyy/MM/dd hh:mm' }}
+          &nbsp;&nbsp;&nbsp;
+        } @else if (data.StartTime) {
+          <span class="text-primary">開始時間：</span>{{ data.StartTime | date: 'yyyy/MM/dd hh:mm' }}
+          &nbsp;&nbsp;&nbsp;
+          <span class="text-primary">結束時間：</span>{{ data.EndTime | date: 'yyyy/MM/dd hh:mm' }}
+          &nbsp;&nbsp;&nbsp;
+        }
+        @if (data.ElementValue[0].Temperature ) {
+          <span class="text-primary">溫度：</span>{{ data.ElementValue[0].Temperature }}
+        } @else if (data.ElementValue[0].DewPoint) {
+          <span class="text-primary">露點溫度：</span>{{ data.ElementValue[0].DewPoint }}
+        } @else if (data.ElementValue[0].RelativeHumidity) {
+          <span class="text-primary">相對濕度：</span>{{ data.ElementValue[0].RelativeHumidity }}
+        } @else if (data.ElementValue[0].ApparentTemperature) {
+          <span class="text-primary">體感溫度：</span>{{ data.ElementValue[0].ApparentTemperature }}
+        } @else if (data.ElementValue[0].ComfortIndexDescription) {
+          <span class="text-primary">舒適度指數：</span>{{ data.ElementValue[0].ComfortIndexDescription }}
+        } @else if (data.ElementValue[0].WindSpeed) {
+          <span class="text-primary">風速：</span>{{ data.ElementValue[0].WindSpeed }}
+        } @else if (data.ElementValue[0].WindDirection) {
+          <span class="text-primary">風向：</span>{{ data.ElementValue[0].WindDirection }}
+        } @else if (data.ElementValue[0].ProbabilityOfPrecipitation) {
+          <span class="text-primary">3小時降雨機率：</span>{{ data.ElementValue[0].ProbabilityOfPrecipitation }}
+        } @else if (data.ElementValue[0].Weather) {
+          <span class="text-primary">天氣現象：</span>{{ data.ElementValue[0].Weather }}
+        } @else if (data.ElementValue[0].WeatherDescription) {
+          <span class="text-primary">天氣預報綜合描述：</span>{{ data.ElementValue[0].WeatherDescription }}
+        }
+        <br>
+      }
+    </div>
+      <div class="chartRegion" id="chartRegion">
+        <canvas id="chart"></canvas>
+      </div>
+  </div>
+</div>

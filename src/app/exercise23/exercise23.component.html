@@ -1,0 +1,31 @@
+Month：<input type="month" [(ngModel)]="selected1">
+<br><br>
+Date：<input type="date" [(ngModel)]="selected2">
+<br><br>
+Time：<input type="time" [(ngModel)]="selected3">
+<br><br>
+Date & Time：<input type="datetime-local" [(ngModel)]="selected4">
+<br><br>
+Week：<input type="week" [(ngModel)]="selected5">
+<br><br>
+<mat-form-field>
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="dp" [(ngModel)]="selected6"/>
+  <mat-hint>{{dateFormatString()}}</mat-hint>
+  <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
+  <mat-datepicker #dp></mat-datepicker>
+</mat-form-field>
+
+<hr>
+
+{{ selected1 }}
+<br>
+{{ selected2 }}
+<br>
+{{ selected3 }}
+<br>
+{{ selected4 }}
+<br>
+{{ selected5 }}
+<br>
+{{ selected6 }}

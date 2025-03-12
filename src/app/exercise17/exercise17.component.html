@@ -1,0 +1,9 @@
+@for (data of this.userArray; track $index) {
+  <div class="player">
+    <h1>{{ data.userName }}</h1>
+    <h4>擁有道具：</h4>
+    @for (user of data.props; track $index) {
+      <li>{{ user.propsName }}  數量：{{ user.amount }}</li>
+    }
+  </div>
+}

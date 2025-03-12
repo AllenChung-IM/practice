@@ -1,0 +1,15 @@
+<div class="roleGradeCal">
+  <button type="button" class="btn btn-secondary" style="position:absolute; top: 12px; right:12px;" (click)="gradeReset()">重置</button>
+  <h3 style="color: red; font-weight: bold; margin-top: 20px;">角色等級計算機</h3>
+  <p>等級：{{ grade }} </p>
+    <button type="button" class="btn btn-outline-primary" style="width: 45%; margin-right: 30px" (click)="gradeUp()">升級</button>
+    <button type="button" class="btn btn-outline-secondary" style="width: 45%" (click)="gradeDown()">降級</button>
+  <p>攻擊力：{{ attackForce }}</p>
+  <p>防禦力：{{ defendForce }}</p>
+  <p style="color: red; font-weight: lighter; font-size: 17px; text-align: left; padding: 0 10px;">註解：角色初始等級為1,初始攻擊/防禦為10, 每提升一級攻擊3 防禦2,降級則除3跟2。</p>
+  <div class="changeGradeByMan">
+     <label for="gradeInput" style="margin-top: 0px; font-size: 20px;">自行輸入等級：</label>
+    <input type="number" class="gradeInput" id="gradeInput" [(ngModel)]="gradeInput" placeholder="請輸入整數">
+  </div>
+ <button type="button" class="btn btn-light" style="width: 98%;" (click)="gradeUpdate()">修改等級</button>
+</div>

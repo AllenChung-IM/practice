@@ -1,0 +1,11 @@
+<h1>路由練習</h1>
+<p>使用HTML routerLink做觸發換頁</p>
+<p><a routerLink="./third" routerLinkActive="active">Third Component</a></p>
+<p><a routerLink="./fourth" routerLinkActive="active">Fourth Component</a></p>
+<p>按鈕需使用TS做觸發換頁</p>
+<div class="btnDiv">
+  <button (click)="toStartPage()">返回起始頁</button>
+  <button (click)="toThirdComponent()">Third Component</button>
+  <button (click)="toFourthComponent()" >Fourth Component</button>
+</div>
+<router-outlet></router-outlet>

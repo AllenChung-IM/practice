@@ -1,0 +1,11 @@
+<h1>由輕到重</h1>
+@for (data of this.ELEMENT_DATA_LightToHeavy; track $index) {
+  {{ data.name }}weight：{{ data.weight }}
+  <br>
+}
+<hr>
+<h1>由重到輕</h1>
+@for (data of this.ELEMENT_DATA_HeavyToLight; track $index) {
+  {{ data.name }}weight：{{ data.weight }}
+  <br>
+}

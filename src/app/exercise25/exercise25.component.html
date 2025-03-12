@@ -1,0 +1,10 @@
+<h1>無ngClass</h1>
+<h3 class="test1">樣式1(test1)：ngClass練習</h3>
+<h3 class="test2">樣式2(test2)：ngClass練習</h3>
+
+<br><hr><br>
+
+<h1>有ngClass</h1>
+<h3 [ngClass]="getClassCss('test1')">樣式1(test1)：ngClass練習</h3>
+<h3 [ngClass]="getClassCss('test2')">樣式1(test2)：ngClass練習</h3>
+<h3 [ngClass]="getClassCss('both')">樣式1(test1 & test2)：ngClass練習</h3>

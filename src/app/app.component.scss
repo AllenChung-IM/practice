@@ -1,0 +1,33 @@
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 5px;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(45deg, #F0070C, #CC26D5, #7702FF) border-box;
+  border: 10px solid transparent;
+}
+
+.logo {
+  width: 300px;
+  margin: 40px auto;
+  cursor: pointer;
+}
+
+.main {
+  width: 98.5vw;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: gray;
+}

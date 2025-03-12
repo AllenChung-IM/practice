@@ -1,0 +1,6 @@
+<p>userName：{{ userArray.userName }}</p>
+<p>level：{{ userArray.lev }}</p>
+
+@for (data of userArray.props; track $index) {
+  <p>propsName：{{ data.propsName }}  amount：{{ data.amount }}</p>
+}

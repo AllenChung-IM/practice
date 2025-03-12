@@ -1,0 +1,19 @@
+* {
+  text-align: center;
+}
+
+.selectGrade {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.selectBtn {
+  width: 155px;
+  border-radius: 5px;
+  &:hover {
+    color: white;
+    background-color: gray;
+  }
+}
