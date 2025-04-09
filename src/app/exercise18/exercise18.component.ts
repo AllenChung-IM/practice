@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { HttpService } from '../@http-services/http.service';
 import { CommonModule } from '@angular/common';
 import Chart from 'chart.js/auto';
@@ -23,7 +23,7 @@ export class Exercise18Component {
 
   @ViewChild('chartCanvas', { static: false }) chartCanvas!: ElementRef<HTMLCanvasElement>;
 
-  constructor(private http: HttpService) { }
+  constructor(private http: HttpService) {}
 
   ngOnInit(): void {
     this.http.getApi('https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-D0047-065?Authorization=CWA-DC50DB1F-8DAE-43C7-BD63-B75CDC800BB6&limit=10&format=JSON')
