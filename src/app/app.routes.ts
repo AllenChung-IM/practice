@@ -44,6 +44,7 @@ import { Exercise30Component } from './exercise30/exercise30.component';
 import { Exercise31Component } from './exercise31/exercise31.component';
 import { Exercise32Component } from './exercise32/exercise32.component';
 import { Exercise33Component } from './exercise33/exercise33.component';
+import { Exercise34Component } from './exercise34/exercise34.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full' },
@@ -107,5 +108,6 @@ export const routes: Routes = [
   { path: 'exercise30', component: Exercise30Component },
   { path: 'exercise31', component: Exercise31Component },
   { path: 'exercise32', component: Exercise32Component },
-  { path: 'exercise33', component: Exercise33Component }
+  { path: 'exercise33', component: Exercise33Component },
+  { path: 'exercise34', component: Exercise34Component }
 ]
